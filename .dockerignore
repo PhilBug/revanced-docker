@@ -1,0 +1,7 @@
+.github
+.git*
+LICENSE
+README.md
+shell.nix
+eslint*
+Dockerfile

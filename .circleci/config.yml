@@ -36,7 +36,7 @@ jobs:
             echo "Building version $DOCKER_TAG"
 
             git -C $FILE_PATH checkout $LATEST_TAG
-            cp Dockerfile $FILE_PATH/Dockerfile
+            cp Dockerfile .dockerignore $FILE_PATH
 
             docker build -f $FILE_PATH/Dockerfile \
               -t $IMAGE_NAME:$(echo $LATEST_TAG | tr -d 'v') \
