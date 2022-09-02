@@ -22,5 +22,5 @@ docker run --rm --name revanced -p 8000:8000 philbug/revanced-builder:3.2.3
 If you want to copy the apk file manually:
 
 ```bash
-docker cp revanced:/app/revanced/ReVanced-YouTube-v17.32.35-cli_v2.9.3.jar-patches_v2.39.0.apk .
+docker exec revanced sh -c "mv /app/revanced/ReVanced-YouTube-*.apk /ReVanced.apk" && docker cp revanced:/ReVanced.apk .
 ```
