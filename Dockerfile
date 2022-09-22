@@ -11,11 +11,11 @@ RUN apk add --no-cache \
 
 COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm install --omit=dev
 
 COPY . .
 
 EXPOSE 8000
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["node", "index.js"]
+CMD ["node", "index.js", "--no-open"]
