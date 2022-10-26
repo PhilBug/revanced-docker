@@ -1,4 +1,4 @@
-FROM bellsoft/liberica-openjdk-alpine:17
+FROM bellsoft/liberica-runtime-container:jre-17-musl
 
 WORKDIR /app
 
